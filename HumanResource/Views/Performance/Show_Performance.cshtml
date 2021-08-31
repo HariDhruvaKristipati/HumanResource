@@ -1,0 +1,88 @@
+﻿@model IEnumerable<HumanResource.Models.Performanceclass>
+
+@{
+    ViewBag.Title = "Show_Performance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show_Performance</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_Performance")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Division)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EvaluationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Evaluator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EvaluationPeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SickLeave)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vacation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Holiday)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+    @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EmpName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Division)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.WorkGroup)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EvaluationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Evaluator)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EvaluationPeriod)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SickLeave)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Vacation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Holiday)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Update_Performance", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Show_Performance", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete_Performance", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

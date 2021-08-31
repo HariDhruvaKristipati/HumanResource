@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HumanResource.Models.Resignationclass>
+
+@{
+    ViewBag.Title = "Show_Resignation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show_Resignation</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_Resignation")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeptPosition)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JoiningDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResignationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeptName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DeptPosition)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.JoiningDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ResignationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ContactNumber)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Update_Resignation", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Show_Resignation", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete_Resignation", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

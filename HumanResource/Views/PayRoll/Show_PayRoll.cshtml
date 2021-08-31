@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HumanResource.Models.PayRollclass>
+
+@{
+    ViewBag.Title = "Show_PayRoll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show_PayRoll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_PayRoll")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BasicPay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Allowances)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deductions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrossPay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetPay)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BasicPay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Allowances)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Deductions)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.GrossPay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NetPay)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Update_PayRoll", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Show_PayRoll", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete_PayRoll", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>

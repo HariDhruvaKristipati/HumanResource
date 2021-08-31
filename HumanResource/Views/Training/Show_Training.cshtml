@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HumanResource.Models.Trainingclass>
+
+@{
+    ViewBag.Title = "Show_Training";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show_Training</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_Training")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainingName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainingStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainingPeriod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainingExp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrevEmpExp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainingName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainingStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainingPeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrainingExp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrevEmpExp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Update_Training", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Show_Training", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete_Training", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

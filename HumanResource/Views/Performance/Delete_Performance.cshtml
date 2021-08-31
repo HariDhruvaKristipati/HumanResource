@@ -1,0 +1,104 @@
+﻿@model HumanResource.Models.Performanceclass
+
+@{
+    ViewBag.Title = "Delete_Performance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete_Performance</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Performanceclass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Division)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Division)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvaluationDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvaluationDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Evaluator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Evaluator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EvaluationPeriod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EvaluationPeriod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SickLeave)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SickLeave)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vacation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vacation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Holiday)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Holiday)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<HumanResource.Models.ResumeTrackingclass>
+
+@{
+    ViewBag.Title = "Show_ResumeTracking";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Show_ResumeTracking</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Add_ResumeTracking")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Curriculam)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaOfSpecialization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaOfInterest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Curriculam)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.WorkExperience)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AreaOfSpecialization)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AreaOfInterest)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Contact)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Update_ResumeTracking", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Show_ResumeTracking", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete_ResumeTracking", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>
