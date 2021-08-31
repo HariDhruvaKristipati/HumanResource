@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HRMSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DETAILS">
+    <Key>
+      <PropertyRef Name="Employee id" />
+    </Key>
+    <Property Name="Employee id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Employee_Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone_number" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Supervisor_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Department" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Employee_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="HRMSModelStoreContainer">
+    <EntitySet Name="DETAILS" EntityType="Self.DETAILS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

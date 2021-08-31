@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HRMSModel1StoreContainer" CdmEntityContainer="HRMSEntities4">
+    <EntitySetMapping Name="TrainingTables">
+      <EntityTypeMapping TypeName="HRMSModel1.TrainingTable">
+        <MappingFragment StoreEntitySet="TrainingTable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TrainingName" ColumnName="TrainingName" />
+          <ScalarProperty Name="TrainingPeriod" ColumnName="TrainingPeriod" />
+          <ScalarProperty Name="TrainingStatus" ColumnName="TrainingStatus" />
+          <ScalarProperty Name="TrainingExpe" ColumnName="TrainingExpe" />
+          <ScalarProperty Name="PrevEmpExp" ColumnName="PrevEmpExp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
